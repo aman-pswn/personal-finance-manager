@@ -1,0 +1,335 @@
+:root {
+  font-family: "Manrope", sans-serif;
+  color: #fafafa;
+  background:
+    radial-gradient(circle at top left, rgba(249, 115, 22, 0.24), transparent 24%),
+    radial-gradient(circle at top right, rgba(34, 197, 94, 0.08), transparent 20%),
+    radial-gradient(circle at 75% 30%, rgba(34, 197, 94, 0.16), transparent 18%),
+    linear-gradient(180deg, #0a0a0a 0%, #111111 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #0a0a0a;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent);
+}
+
+.layout {
+  position: relative;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 56px 20px 40px;
+}
+
+.hero {
+  display: grid;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #f97316;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  border: 1px solid rgba(249, 115, 22, 0.24);
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 6vw, 4.6rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin: 0 0 14px;
+  max-width: 12ch;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 54ch;
+  color: #a3a3a3;
+  font-size: 1.05rem;
+}
+
+.summary-grid,
+.content-grid {
+  display: grid;
+  gap: 18px;
+}
+
+.summary-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.summary-card,
+.panel,
+.transaction-card {
+  background: rgba(23, 23, 23, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(14px);
+}
+
+.summary-card {
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.summary-card span {
+  display: block;
+  color: #a3a3a3;
+  margin-bottom: 8px;
+}
+
+.summary-card strong {
+  font-size: 1.75rem;
+}
+
+.summary-card.balance strong {
+  color: #fafafa;
+}
+
+.summary-card.income strong {
+  color: #22c55e;
+}
+
+.summary-card.expense strong {
+  color: #f97316;
+}
+
+.content-grid {
+  grid-template-columns: minmax(320px, 380px) 1fr;
+  align-items: start;
+}
+
+.panel {
+  border-radius: 28px;
+  padding: 24px;
+}
+
+.panel-heading h2 {
+  margin: 0 0 8px;
+  font-size: 1.35rem;
+}
+
+.panel-heading p {
+  margin: 0 0 20px;
+  color: #737373;
+}
+
+.transaction-form,
+.transaction-list {
+  display: grid;
+  gap: 16px;
+}
+
+.transaction-form label {
+  display: grid;
+  gap: 8px;
+  color: #fafafa;
+  font-size: 0.94rem;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.transaction-form input,
+.transaction-form textarea,
+.transaction-form select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111111;
+  color: #fafafa;
+  border-radius: 16px;
+  padding: 14px 16px;
+  outline: none;
+}
+
+.transaction-form input:focus,
+.transaction-form textarea:focus,
+.transaction-form select:focus {
+  border-color: rgba(34, 197, 94, 0.9);
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.14);
+}
+
+.transaction-form button,
+.transaction-side button {
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.transaction-form button {
+  margin-top: 4px;
+  padding: 15px 18px;
+  border-radius: 16px;
+  color: #0a0a0a;
+  background: linear-gradient(135deg, #f97316, #fb923c);
+  font-weight: 800;
+  box-shadow: 0 16px 40px rgba(249, 115, 22, 0.28);
+}
+
+.transaction-form button:hover,
+.transaction-side button:hover {
+  transform: translateY(-1px);
+}
+
+.transaction-form button:disabled {
+  opacity: 0.7;
+  cursor: progress;
+}
+
+.status,
+.empty-state {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.05);
+  color: #fafafa;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.status.error {
+  background: rgba(249, 115, 22, 0.12);
+  color: #fed7aa;
+  display: grid;
+  gap: 12px;
+  border-color: rgba(249, 115, 22, 0.16);
+}
+
+.retry-button {
+  width: fit-content;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(249, 115, 22, 0.24);
+  background: rgba(249, 115, 22, 0.12);
+  color: #fafafa;
+}
+
+.transaction-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px;
+  border-radius: 22px;
+}
+
+.transaction-topline {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.transaction-topline h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.transaction-card p,
+.transaction-card small {
+  margin: 0;
+  color: #737373;
+}
+
+.transaction-side {
+  display: grid;
+  justify-items: end;
+  gap: 10px;
+  min-width: 110px;
+}
+
+.transaction-side strong {
+  font-size: 1rem;
+}
+
+.transaction-side button {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(249, 115, 22, 0.12);
+  color: #fdba74;
+  border: 1px solid rgba(249, 115, 22, 0.18);
+}
+
+.pill {
+  display: inline-flex;
+  padding: 5px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.pill.income {
+  background: rgba(34, 197, 94, 0.14);
+  color: #22c55e;
+}
+
+.pill.expense {
+  background: rgba(249, 115, 22, 0.14);
+  color: #f97316;
+}
+
+@media (max-width: 920px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .layout {
+    padding-inline: 16px;
+  }
+
+  .hero h1 {
+    max-width: none;
+  }
+
+  .split,
+  .transaction-card {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .transaction-side {
+    justify-items: start;
+  }
+}
