@@ -62,4 +62,28 @@ backend/
 cd backend
 mvn spring-boot:run
 
+---
+
+## Author
+
+### Aman Kumar Paswan
+
+Passionate full-stack developer focused on building scalable web applications using Java, Spring Boot, React, and REST APIs.
+
+### Connect With Me
+
+- GitHub: https://github.com/aman-pswn
+- LinkedIn: linkedin.com/in/aman-paswan-69a209378
+- Email: your- akpaman5434@gmail.com
+
+---
+
+## Future Improvements
+
+- JWT Authentication
+- Dashboard Analytics
+- Monthly Expense Reports
+- User Profile Management
+- Cloud Deployment
+
 
