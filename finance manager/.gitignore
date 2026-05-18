@@ -1,13 +1,19 @@
-# Frontend
-frontend/node_modules/
+# Node modules
+node_modules/
+
+# Vite build
 frontend/dist/
 
-# Backend
+# Java target
 backend/target/
 
-# IDE and OS
+# IDE files
 .idea/
-.vscode/
 *.iml
-Thumbs.db
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Logs
+*.log
