@@ -40,6 +40,8 @@ backend/
  ├── dto
  ├── entity
  └── resources
+
+```
 ---
 
 ## Frontend
