@@ -40,3 +40,24 @@ backend/
  ├── dto
  ├── entity
  └── resources
+---
+
+## Frontend
+
+- React
+- Vite
+- JavaScript
+- CSS
+- Axios
+
+---
+
+## How to Run
+
+### Backend
+
+```bash
+cd backend
+mvn spring-boot:run
+
+
