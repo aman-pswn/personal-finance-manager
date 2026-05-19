@@ -2,9 +2,7 @@ FROM eclipse-temurin:17
 
 WORKDIR /app
 
-COPY finance\ manager/backend ./backend
-
-WORKDIR /app/backend
+COPY . .
 
 RUN apt-get update && apt-get install -y maven
 
