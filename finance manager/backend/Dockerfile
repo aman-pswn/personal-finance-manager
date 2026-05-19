@@ -6,6 +6,8 @@ COPY . .
 
 RUN apt-get update && apt-get install -y maven
 
+WORKDIR "/app/finance manager/backend"
+
 RUN mvn clean package -DskipTests
 
 EXPOSE 8080
