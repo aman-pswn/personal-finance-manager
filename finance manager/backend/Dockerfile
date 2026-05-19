@@ -2,7 +2,7 @@ FROM eclipse-temurin:17
 
 WORKDIR /app
 
-COPY "finance manager/backend" ./backend
+COPY finance\ manager/backend ./backend
 
 WORKDIR /app/backend
 
