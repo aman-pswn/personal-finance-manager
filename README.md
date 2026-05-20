@@ -75,10 +75,9 @@ Passionate full-stack developer focused on building scalable web applications us
 
 ### Connect With Me
 
-- GitHub: https://github.com/aman-pswn
-- LinkedIn: linkedin.com/in/aman-paswan-69a209378
-- Email: your- akpaman5434@gmail.com
-
+- GitHub: [aman-pswn](https://github.com/aman-pswn)
+- LinkedIn: [Aman Paswan](https://www.linkedin.com/in/aman-paswan-69a209378/)
+- Email: akpaman5434@gmail.com
 ---
 
 ## Future Improvements
