@@ -14,10 +14,11 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOriginPatterns(
-                                "http://localhost:*",
-                                "http://127.0.0.1:*"
-                        )
+   .allowedOriginPatterns(
+    "http://localhost:*",
+    "http://127.0.0.1:*",
+    "https://*.vercel.app"
+)
                         .allowedMethods("GET", "POST", "DELETE", "PUT", "OPTIONS");
             }
         };
